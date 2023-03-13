@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block content%}
+
+<h3>Users</h3>
+<table class="table-success table table-bordered table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">Age</th>
+      <th scope="col">Sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for us in users %}
+    <tr>
+      <td>{{us.name}}</td>
+      <td>{{us.surname}}</td>
+      <td>{{us.age}}</td>
+      <td>{{us.sex}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

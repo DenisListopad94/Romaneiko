@@ -1,0 +1,153 @@
+{% extends 'base.html'%}
+{% block content%}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- Contact Us Section -->
+<section class="Material-contact-section section-padding section-dark">
+    <div class="container">
+        <div class="row">
+            <!-- Section Titile -->
+            <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                <h1 class="section-title">Friender</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Section Titile -->
+            <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using Content.</p>
+
+                <div class="find-widget">
+                    Company: <a href="#">NONE</a>
+                </div>
+                <div class="find-widget">
+                    Address: <a href="#">-</a>
+                </div>
+                <div class="find-widget">
+                    Phone: <a href="#">+375-29-118-28-86</a>
+                </div>
+
+                <div class="find-widget">
+                    Website: <a href="https://teachmeskills.by/">teachmeskills.by</a>
+                </div>
+                <div class="find-widget">
+                    Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
+                </div>
+            </div>
+            <!-- contact form -->
+            <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                <form method="post" action="{% url 'add_user' %}">
+                    <!-- Name -->
+                    <div class="form-group label-floating">
+                        <label class="control-label" for="name">Name</label>
+                        <input class="form-control form-control-lg" type="text" id="name" name='name' required
+                               data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- surname -->
+                    <div class="form-group label-floating">
+                        <label class="control-label" for="surname">Surname</label>
+                        <input class="form-control form-control-lg" type="text" id="surname" name='surname' required
+                               data-error="Please enter your Email">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- Age -->
+                    <div class="form-group label-floating">
+                        <label class="control-label" for="age">Age</label>
+                        <input class="form-control form-control-lg" type="text" id="age" name='age' required
+                               data-error="Please enter your message subject">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- Sex -->
+                    <div class="form-group label-floating">
+                        <label for="sex" class="control-label">Sex</label>
+                        <input class="form-control form-control-lg" type="text" id="sex" name='sex' placeholder="М\Ж"
+                               required data-error="Please enter your message subject">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!-- Phone -->
+                    <div class="form-group label-floating">
+                        <label for="phone" class="control-label">Phone</label>
+                        <input class="form-control form-control-lg" type="text" id="phone" name='phone' required
+                               data-error="Please enter your message subject">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!--HOBBIES-->
+                    <div class="form-row field-hobbies">
+
+
+                        <div>
+
+
+                            <label class="required" for="id_hobbies">List of hobbies:</label>
+
+                            <div class="related-widget-wrapper" data-model-ref="hobbies">
+                                <select name="hobbies" required id="id_hobbies" multiple>
+                                    <option value="1">Music
+                                    </option>
+
+                                    <option value="2">Writing</option>
+
+                                    <option value="3">Caffee
+
+                                    </option>
+
+                                    <option value="4">Films
+                                    </option>
+
+                                    <option value="5">Meditation</option>
+
+                                    <option value="6">Painting</option>
+
+                                    <option value="7">Stay at home</option>
+
+                                    <option value="8">Cars
+                                    </option>
+
+                                    <option value="9">Games
+                                    </option>
+
+                                    <option value="10">Anime</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MSG -->
+                    <div class="form-group label-floating">
+                        <label for="msg" class="control-label">MSG</label>
+                        <input class="form-control form-control-lg" type="text" id="msg" name='msg' required
+                               data-error="Please enter your message subject">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <!--photo-->
+                    <div>
+
+
+                        <label class="required" for="id_photo">Photo</label>
+
+                        <input type="file" name='photo' accept="image/*" required id="id_photo">
+
+
+                    </div>
+                    <!-- Form Submit -->
+
+                    <div class="form-submit mt-5">
+                        <button type="submit" class="btn btn-outline-dark">Зарегистрировать</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
